@@ -1,0 +1,15 @@
+<launch>
+
+//分别是节点包名，节点，节点名
+<node pkg="ssr_pkg" type="yao_node" name="yao_node"/>
+
+//这句可以让超的节点单独显示在一个屏幕上，单独分析超节点
+<node pkg="ssr_pkg" type="chao_node" name="chao_node" launch-prefix="gnome-terminal -e"/>
+
+//让ma节点接收到的消息显示在屏幕上
+<node pkg="atr_pkg" type="ma_node" name="ma_node" output="screen"/>
+
+</launch>
+
+//另外roslaunch launch文件所在包名 launch文件名  用来运行launch文件。
+//rqt_graph用来显示传输图
